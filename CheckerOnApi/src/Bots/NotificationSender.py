@@ -1,7 +1,7 @@
-from src.Bots.TwitterBot import *
-from src.Bots.DesktopNotifications import *
-from src.Plateformes import *
-from src.Bots.DiscordBot import *
+from CheckerOnFile.src.Bots.TwitterBot import *
+from CheckerOnFile.src.Bots.DesktopNotifications import *
+from CheckerOnFile.src.Plateformes import *
+from CheckerOnFile.src.Bots.DiscordBot import *
 
 # Creation des bots de notifications
 dsB = DesktopNotifications()

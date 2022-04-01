@@ -1,8 +1,9 @@
 import datetime
 import time
+import requests
 
-from src import ApiNvidia
-from src.Bots.NotificationSender import NotificationSender
+from CheckerOnFile.src import ApiNvidia
+from CheckerOnFile.src.Bots.NotificationSender import NotificationSender
 
 
 # Graphic Cards available for checking :
@@ -59,12 +60,10 @@ class Checker:
             print("Actually cheking " + str(len(GraphicCards)) + " graphic cards at : " + link)
 
             # Enregistrement du texte de l'api dans une variable
-            ## myfile = requests.get(link).text
+            myfile = requests.get(link).text
 
             # Suppréssion du texte inutile au fonctionnement de l'application de l'api NVIDIA
-            ## withoutb = myfile[27:-2]
-
-            withoutb = ApiNvidia.apitxt
+            withoutb = myfile[27:-2]
 
 
             start = 0

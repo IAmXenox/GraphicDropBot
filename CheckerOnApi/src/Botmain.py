@@ -1,5 +1,5 @@
 from Checker import *
-from src.Interface.InterfaceMenu import *
+from CheckerOnFile.src.Interface.InterfaceMenu import *
 
 
 # Création du menu
