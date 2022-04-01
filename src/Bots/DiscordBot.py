@@ -1,7 +1,7 @@
 import json
 import requests
 
-from ListToDiscordJson import ListToDiscordJson
+from src.Bots.toJsons.ListToDiscordJson import ListToDiscordJson
 
 # Url du webhook sur le channel discord ou les messages sont envoyés
 webhook_url = 'https://discord.com/api/webhooks/951494877227647047/hbCxDG5ATbAxitF7Kno6VBqNLJj96GdUR_rhSK9mw2O4X8PNPL1-RvAT7hpE0nwJmNCD'

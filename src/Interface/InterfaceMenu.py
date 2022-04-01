@@ -1,9 +1,6 @@
 import json
 from tkinter import *
 
-import requests
-import tweepy
-
 
 class InterfaceMenu:
     global listOfCgActivated
@@ -26,7 +23,7 @@ class InterfaceMenu:
         master.config(bg="#DFDFDF")
 
         # Creating the frames
-        frameButtons = Frame(master, bg="#DFDFDF", )
+        frameButtons = Frame(master, bg="#DFDFDF")
 
         # Add a send button
         Button(frameButtons, text="Lancer le Bot",

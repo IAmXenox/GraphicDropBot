@@ -1,8 +1,9 @@
 from Checker import *
-from InterfaceMenu import *
+from src.Interface.InterfaceMenu import *
 
 
 # Création du menu
+
 menu = InterfaceMenu()
 
 

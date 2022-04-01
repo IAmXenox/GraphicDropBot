@@ -1,16 +1,12 @@
-from TwitterBot import *
-from DesktopNotifications import *
-from Checker import *
-from Plateformes import *
-from DiscordBot import *
-from MessengerBot import *
-from InterfaceMenu import *
+from src.Bots.TwitterBot import *
+from src.Bots.DesktopNotifications import *
+from src.Plateformes import *
+from src.Bots.DiscordBot import *
 
 # Creation des bots de notifications
 dsB = DesktopNotifications()
 twB = TwitterBot()
 diB = DiscordBot()
-meB = MessengerBot()
 
 class NotificationSender:
     def notificationDrop(self, gCList):
@@ -23,5 +19,3 @@ class NotificationSender:
             dsB.sendNotif(gCList)
         if Plateformes.Discord.value:
             diB.sendNotif(gCList)
-        if Plateformes.Messenger.value:
-            meB.sendNotification(gCList)

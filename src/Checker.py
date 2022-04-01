@@ -1,6 +1,8 @@
 import datetime
 import time
-from NotificationSender import NotificationSender
+
+from src import ApiNvidia
+from src.Bots.NotificationSender import NotificationSender
 
 
 # Graphic Cards available for checking :
@@ -62,9 +64,7 @@ class Checker:
             # Suppréssion du texte inutile au fonctionnement de l'application de l'api NVIDIA
             ## withoutb = myfile[27:-2]
 
-            file = open("ApiNvidia.txt",'r')
-            myfile = file.readline()
-            withoutb = myfile[27:-2]
+            withoutb = ApiNvidia.apitxt
 
 
             start = 0
@@ -101,6 +101,6 @@ class Checker:
                     start = 0
             # Envoie de l'array contenant les cartes graphiques disponibles si il n'est pas vide
             if len(graphicCardsAvailable) != 0:
-                self.notificationDrop(graphicCardsAvailable)
+                self.notificationDrop(graphicCardsAvailable[:len(graphicCardsAvailable)-1])
                 # Suppression de tout les cartes graphiques disponibles de l'array
                 graphicCardsAvailable.clear()
